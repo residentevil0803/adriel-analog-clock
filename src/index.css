@@ -1,13 +1,63 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.hour-hand,
+.minute-hand,
+.second-hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  background-color: #000;
+  transform-origin: bottom center;
+}
+
+.hour-hand {
+  width: 6px;
+  height: 60px;
+  margin-left: -3px;
+}
+
+.minute-hand {
+  width: 4px;
+  height: 90px;
+  margin-left: -2px;
+}
+
+.second-hand {
+  width: 2px;
+  height: 100px;
+  margin-left: -1px;
+  background-color: red;
+}
+
+.tooltip-wrapper {
+  border-radius: 50%;
 }
